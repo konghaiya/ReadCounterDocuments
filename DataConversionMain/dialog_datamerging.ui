@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_dataMerging</class>
+ <widget class="QDialog" name="Dialog_dataMerging">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>979</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget,
+QMainWindow{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(80, 80, 90, 255), stop:1 rgba(30, 30, 30, 255));
+    font: 12pt &quot;微软雅黑&quot;;
+	color: rgb(194, 193, 187);
+}
+QTableWidget{
+	alternate-background-color: rgba(255, 255, 255, 20);
+}
+
+/*表头样式*/
+
+QHeaderView::section{
+	background-color: rgb(86, 86, 86);
+	border:1px solid rgba(220,220,220,100);
+	color: rgb(255, 255, 255);
+
+}
+/*按钮*/
+QPushButton,
+QToolButton{
+	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(68, 68, 75, 255), stop:1 rgba(30, 30, 30, 255));
+	border:1px groove rgba(255,255,255,100);
+
+}
+/*按钮悬停和按下状态*/
+QPushButton:hover,
+QPushButton:pressed,
+QPushButton:checked,
+QPushButton:selected,
+QToolButton:hover,
+QToolButton:pressed,
+QToolButton:checked,
+QToolButton:selected{
+	color: rgba(255, 150, 0,255);
+
+	background-color: qradialgradient(spread:pad, cx:0.505682, cy:0, radius:0.8, fx:0.505682, fy:0, stop:0 rgba(106, 162, 214, 255), stop:1 rgba(30, 30, 30, 255));
+	border:2px groove rgba(70, 140, 195,100);
+}
+/*滚动条*/
+QScrollBar{
+	background-color: rgba(255, 255, 255,10);
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+/*水平滚动条*/
+QScrollBar:horizontal{
+    height:17px;
+    margin:0 16 0 16;
+}
+/*水平滚动条 滑块*/
+QScrollBar::handle:horizontal{
+	background-color: rgba(255,255,255,95);
+    min-width:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+QScrollBar::handle:horizontal:hover{
+	background-color:rgba(70, 140, 195,100);	
+    min-width:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+}
+/*水平滚动条 微调按钮*/
+QScrollBar::add-line:horizontal{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+    width:15px;
+    subcontrol-position:right;
+    subcontrol-origin:margin;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="7" column="0" colspan="2">
+    <widget class="QTextEdit" name="textEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>执行结果：</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" rowspan="4">
+    <widget class="QTableWidget" name="tableWidget">
+     <row>
+      <property name="text">
+       <string/>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>基础帐号</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>合并帐号</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>基础数据库文件：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(120, 120, 120,120);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>205</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);</string>
+       </property>
+       <property name="text">
+        <string>选择基础数据库文件</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>合并数据库文件：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(120, 120, 120,120);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>205</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);</string>
+       </property>
+       <property name="text">
+        <string>选择合并数据库文件</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>需要合并的功能号：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(120, 120, 120,120);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="6" column="1">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="minimumSize">
+      <size>
+       <width>205</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>200</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);</string>
+     </property>
+     <property name="text">
+      <string>开始合并</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);</string>
+     </property>
+     <property name="text">
+      <string>增加</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="minimumSize">
+      <size>
+       <width>120</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(22, 155, 213);</string>
+     </property>
+     <property name="text">
+      <string>删除选中行</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" rowspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>输入需要合并的帐号，可为空</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

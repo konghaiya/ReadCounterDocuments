@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog_dispose</class>
+ <widget class="QDialog" name="Dialog_dispose">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>653</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget,
+QMainWindow{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(80, 80, 90, 255), stop:1 rgba(30, 30, 30, 255));
+    font: 12pt &quot;微软雅黑&quot;;
+	color: rgb(194, 193, 187);
+}
+
+/*工具栏*/
+QToolBar{
+	background-color: rgba(0, 0, 0,80);
+	color: rgb(255, 255, 255);
+
+}
+/*工具箱*/
+QToolBox{
+	color: rgb(194, 193, 187);
+	background-color: rgba(255, 255, 255,0);
+}
+/*工具箱按钮*/
+QToolBox::tab{
+	background-color: rgba(0, 0, 0,100);
+	border:2px groove  gay;	
+	border-color: rgba(255,255,255,60);
+}
+QToolBox::tab:hover,
+QToolBox::tab:selected{
+	color: rgb(255, 255, 255);
+	/*background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 216, 0, 250), stop:1 rgba(255, 152, 30, 100));*/
+	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(57, 71, 82, 255), stop:1 rgba(113, 128, 157, 255));
+	border:2px groove  gay;	
+	border-color: rgba(255,255,255,60);
+	padding:2px 2px;
+
+}
+
+
+/*编辑框、显示框*/
+QLineEdit,
+QListView,
+QTreeView,
+QTableView,
+QColumnView{
+	background-color: rgba(0, 0, 0,80);
+	selection-color: rgb(255, 255, 255);
+	selection-background-color:rgba(70, 140, 195,50);
+	border:0px groove  gay;	
+	border-color: rgba(255,255,255,80);
+    padding:2px 4px;
+}
+/*表头样式*/
+
+QHeaderView::section{
+	background-color: rgb(86, 86, 86);
+	border:1px solid rgba(220,220,220,100);
+	color: rgb(255, 255, 255);
+
+}
+QTableWidget{
+	alternate-background-color: rgba(255, 255, 255, 20);
+}
+
+
+
+/*按钮*/
+QPushButton,
+QToolButton{
+	background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(68, 68, 75, 255), stop:1 rgba(30, 30, 30, 255));
+	border:1px groove rgba(255,255,255,100);
+
+}
+/*按钮悬停和按下状态*/
+QPushButton:hover,
+QPushButton:pressed,
+QPushButton:checked,
+QPushButton:selected,
+QToolButton:hover,
+QToolButton:pressed,
+QToolButton:checked,
+QToolButton:selected{
+	color: rgba(255, 150, 0,255);
+
+	background-color: qradialgradient(spread:pad, cx:0.505682, cy:0, radius:0.8, fx:0.505682, fy:0, stop:0 rgba(106, 162, 214, 255), stop:1 rgba(30, 30, 30, 255));
+	border:2px groove rgba(70, 140, 195,100);
+}
+/*停靠栏*/
+QDockWidget{
+	color: rgb(255, 255, 255);
+	border:1px groove  gay;	
+	border-color: rgba(255,255,0,60);
+}
+/*选项*/
+QCheckBox,
+QRadioButton{
+	background-color: none;
+}
+/*选项勾选状态*/
+QCheckBox:hover,
+QCheckBox:checked,
+QRadioButton:hover,
+QRadioButton:checked{
+	color: rgb(240, 130, 40);
+}
+/*选项卡*/
+QTabWidget{
+}
+QTabWidget::pane{
+	background-color: none;
+	border:2px solid rgba(255,255,255,80);
+}
+/*选项卡tab按钮*/
+QTabBar::tab{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(71, 71, 71, 255), stop:0.119318 rgba(98, 98, 98, 255), stop:1 rgba(53, 53, 53, 255));
+    border:2px solid rgba(0,0,0,100);
+	min-width:70px;
+	min-height:15px;
+}
+QTabBar::tab:selected,
+QTabBar::tab:hover{
+	color: rgb(0, 0, 0);
+
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 216, 0, 230), stop:1 rgba(255, 152, 30, 150));
+	border:1px solid rgba(0,0,0,150);
+}
+/*编辑框、微调框*/
+QComboBox,
+QTextEdit,
+QPlainTextEdit,
+QLineEdit,
+QTimeEdit,
+QDateEdit,
+QDateTimeEdit,
+QSpinBox,
+QDoubleSpinBox{
+	background-color: rgba(0, 0, 0,80);
+	selection-color: rgb(255, 255, 255);
+	selection-background-color:rgba(70, 140, 195,50);
+	border:0px groove  rgba(255,255,255,80);
+}
+/*编辑框、微调框 按钮*/
+QTextEdit::up-button,
+QTextEdit::down-button,
+QPlainTextEdit::up-button,
+QPlainTextEdit::down-button,
+QLineEdit::up-button,
+QLineEdit::down-button,
+QTimeEdit::up-button,
+QTimeEdit::down-button,
+QDateEdit::up-button,
+QDateEdit::down-button,
+QDateTimeEdit::up-button,
+QDateTimeEdit::down-button,
+QSpinBox::up-button,
+QSpinBox::down-button,
+QDoubleSpinBox::up-button,
+QDoubleSpinBox::down-button{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+/*编辑框、微调框 按钮状态*/
+QTextEdit::up-button:hover,
+QTextEdit::down-button:hover,
+QPlainTextEdit::up-button:hover,
+QPlainTextEdit::down-button:hover,
+QLineEdit::up-button:hover,
+QLineEdit::down-button:hover,
+QTimeEdit::up-button:hover,
+QTimeEdit::down-button:hover,
+QDateEdit::up-button:hover,
+QDateEdit::down-button:hover,
+QDateTimeEdit::up-button:hover,
+QDateTimeEdit::down-button:hover,
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover,
+QDoubleSpinBox::up-button:hover,
+QDoubleSpinBox::down-button:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+}
+/*编辑框、微调框 箭头*/
+QTextEdit::down-arrow,
+QPlainTextEdit::down-arrow,
+QLineEdit::down-arrow,
+QTimeEdit::down-arrow,
+QDateEdit::down-arrow,
+QDateTimeEdit::down-arrow,
+QSpinBox::down-arrow,
+QDoubleSpinBox::down-arrow{
+	image: url(:/icon/down-arrow.png);
+	height:5px;
+}
+QTextEdit::up-arrow,
+QPlainTextEdit::up-arrow,
+QLineEdit::up-arrow,
+QTimeEdit::up-arrow,
+QDateEdit::up-arrow,
+QDateTimeEdit::up-arrow,
+QSpinBox::up-arrow,
+QDoubleSpinBox::up-arrow{
+	image: url(:/icon/up-arrow.png);
+	height:5px;
+}
+/*选项栏 箭头*/
+QComboBox::drop-down{	
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);	
+    image: url(:/icon/down-arrow.png);
+	width:7px;
+    padding:2px 4px;
+}
+QComboBox::drop-down:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(30, 125, 255,100);
+    image: url(:/icon/down-arrow.png);
+	width:7px;
+    padding:2px 4px;
+}
+/*标签*/
+QLabel{
+    background-color:none;
+    padding:2px 4px;
+}
+/*组*/
+Q3GroupBox,QGroupBox{
+	background-color: rgba(255,255,255,10);
+    border:2px groove;	
+    border-color:rgba(255,255,255,80);
+}
+/*滚动条*/
+QScrollBar{
+	background-color: rgba(255, 255, 255,10);
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+/*水平滚动条*/
+QScrollBar:horizontal{
+    height:17px;
+    margin:0 16 0 16;
+}
+/*水平滚动条 滑块*/
+QScrollBar::handle:horizontal{
+	background-color: rgba(255,255,255,95);
+    min-width:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+QScrollBar::handle:horizontal:hover{
+	background-color:rgba(70, 140, 195,100);	
+    min-width:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+}
+/*水平滚动条 微调按钮*/
+QScrollBar::add-line:horizontal{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+    width:15px;
+    subcontrol-position:right;
+    subcontrol-origin:margin;
+}
+QScrollBar::add-line:horizontal:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+    width:15px;
+    subcontrol-position:right;
+    subcontrol-origin:margin;
+}
+QScrollBar::sub-line:horizontal{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+    width:15px;
+    subcontrol-position:left;
+    subcontrol-origin:margin;
+}
+QScrollBar::sub-line:horizontal:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+    width:15px;
+    subcontrol-position:left;
+    subcontrol-origin:margin;
+}
+/*水平滚动条 箭头*/
+QScrollBar::left-arrow:horizontal{
+	image: url(:/icon/left-arrow.png);
+height:7px;
+}
+QScrollBar::right-arrow:horizontal{
+	image: url(:/icon/right-arrow.png);
+height:7px;
+}
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal{
+	background-color:none;
+}
+/*垂直滚动条*/
+QScrollBar:vertical{
+    height:17px;
+    margin: 16 0 16 0;
+}
+/*垂直滚动条 滑块*/
+QScrollBar::handle:vertical{
+	background-color:  rgba(255,255,255,95);
+    min-height:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+}
+QScrollBar::handle:vertical:hover{
+	background-color:rgba(70, 140, 195,100);	
+    min-height:20px;
+    margin:1px 0px 1px 0px;
+	border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+}
+/*垂直滚动条 微调按钮*/
+QScrollBar::add-line:vertical{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+    height:15px;
+    subcontrol-position:bottom;
+    subcontrol-origin:margin;
+}
+QScrollBar::add-line:vertical:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+    height:15px;
+    subcontrol-position:bottom;
+    subcontrol-origin:margin;
+}
+QScrollBar::sub-line:vertical{
+	background-color: rgba(255,255,255,60);
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 255,80);
+    height:15px;
+    subcontrol-position:top;
+    subcontrol-origin:margin;
+}
+QScrollBar::sub-line:vertical:hover{
+	background-color:rgba(70, 140, 195,100);	
+    border:1px groove  gay;	
+	border-color: rgba(255, 255, 127,50);
+    height:15px;
+    subcontrol-position:top;
+    subcontrol-origin:margin;
+}
+/*垂直滚动条 箭头*/
+QScrollBar::up-arrow:vertical{
+	image: url(:/icon/up-arrow.png);
+    height:7px;
+}
+QScrollBar::down-arrow:vertical{
+	image: url(:/icon/down-arrow.png);
+    height:7px;
+}
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical{
+	background-color:none;
+}
+/*滑块背景*/
+QSlider{
+	background:none;
+}
+/*水平滑块*/
+QSlider::groove:horizontal{
+	border:1px solid rgba(255, 255, 255,80);
+	background:rgba(255,255,255,80);
+	height:5px;
+	border-radius:1px;
+	padding-left:-1px;
+	padding-right:-1px;
+}
+QSlider::sub-page:horizontal{
+	background:rgba(70, 140, 195,150);
+	border:1px solid none;
+	height:10px;
+	border-radius:2px;
+}
+QSlider::add-page:horizontal{
+	background:rgba(255,255,255,80);
+	border:0px solid ;
+	height:10px;
+	border-radius:2px;
+}
+/*水平滑块 游标*/
+QSlider::handle:houizontal{
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #265782,stop:0.778409 rgba(255,255,255,255));
+	width:11px;
+	margin-top:-3px;
+	margin-bottom:-3px;
+	border-radius:5px;
+}
+QSlider::handle:horizontal:hover{
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 rgb(0,150,255),stop:0.778409 rgba(255,255,255,255));
+	width:11px;
+	margin-top:-3px;
+	margin-bottom:-3px;
+	border-radius:5px;
+}
+/*垂直滑块*/
+QSlider::groove:vertical{
+	border:1px solid rgba(255, 255, 255,80);
+	background:rgba(255,255,255,80);
+	width:5px;
+	border-radius:1px;
+    padding-top:-1px;
+    padding-bottom:-1px;
+}
+QSlider::add-page:vertical{
+	background:rgba(70, 140, 195,150);
+	border:1px solid none;
+	width:10px;
+	border-radius:2px;
+}
+QSlider::sub-page:vertical{
+	background:rgba(255,255,255,80);
+	border:0px solid ;
+	width:10px;
+	border-radius:2px;
+}
+/*垂直滑块 游标*/
+QSlider::handle:vertical{
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 #265782,stop:0.778409 rgba(255,255,255,255));
+	height:11px;
+	margin-left:-3px;
+	margin-right:-3px;
+	border-radius:5px;
+}
+QSlider::handle:vertical:hover{
+	background:qradialgradient(spread:pad,cx:0.5,cy:0.5,radius:0.5,fx:0.5,fy:0.5,stop:0.6 rgb(0,150,255),stop:0.778409 rgba(255,255,255,255));
+	height:11px;
+	margin-left:-3px;
+	margin-right:-3px;
+	border-radius:5px;
+}
+/*进度条*/
+QProgressBar{
+	background-color: rgba(0, 0, 0,80);
+	color:rgb(255,150,0);
+	border:1px solid rgba(255,255,255,80);
+	text-align:center;
+    max-height:20px;
+}
+QProgressBar::chunk{
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:1, stop:0 rgba(255, 150, 0, 190), stop:1 rgba(255, 150, 0,80));
+
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="7" column="1">
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>导入入参校验配置模板至目标程序目录</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>启动数据模拟</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>关闭数据模拟</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>开启数据获取</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>关闭数据获取</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>返回</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>166</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="7" column="0">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>171</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0">
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="1">
+    <spacer name="verticalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

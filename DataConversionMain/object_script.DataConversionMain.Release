@@ -1,0 +1,15 @@
+INPUT(
+./obj\release\main.o
+./obj\release\dataconversionmain.o
+./obj\release\dialog_automation.o
+./obj\release\dialog_dispose.o
+./obj\release\widget_showdata.o
+./obj\release\dialog_leadingindatabase.o
+./obj\release\dc_account.o
+./obj\release\qrc_DC_img.o
+./obj\release\moc_dataconversionmain.o
+./obj\release\moc_dialog_automation.o
+./obj\release\moc_dialog_dispose.o
+./obj\release\moc_widget_showdata.o
+./obj\release\moc_dialog_leadingindatabase.o
+);
